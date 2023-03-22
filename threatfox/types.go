@@ -26,6 +26,7 @@ type IOC struct {
 	ThreatTypeDesc   string   `json:"threat_type_desc"`
 }
 
+// TimeSeen provides a JSON type for the fields LastSeen and FirstSeen
 type TimeSeen time.Time
 
 func (s *TimeSeen) UnmarshalJSON(b []byte) error {

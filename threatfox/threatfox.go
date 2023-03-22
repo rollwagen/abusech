@@ -1,3 +1,4 @@
+// Package threatfox provides convenience methods to access the threatfox.abuse.ch API
 package threatfox
 
 import (
@@ -21,6 +22,7 @@ func New() *ThreatFox {
 	}
 }
 
+// GetIOCByID queries ThreatFox for a particular IOC id sending an HTTP POST request to the Threatfox API
 func (t *ThreatFox) GetIOCByID(id string) (IOCDetail, error) {
 	_, err := strconv.Atoi(id)
 	if err != nil {
@@ -41,6 +43,7 @@ func (t *ThreatFox) GetIOCByID(id string) (IOCDetail, error) {
 	return *resp.Result().(*IOCDetail), nil
 }
 
+// GetIOCs return a copy of the current IOC dataset from ThreatFox by sending an HTTP POST request to the Threatfox API
 func (t *ThreatFox) GetIOCs(days int) ([]IOC, error) {
 	if days < 1 || days > 7 {
 		return nil, fmt.Errorf("number of days outside range min=1 max=7: %d", days)
@@ -61,6 +64,7 @@ func (t *ThreatFox) GetIOCs(days int) ([]IOC, error) {
 	return r.Data, nil
 }
 
+// GetIOCTypes obtains a list of supported IOC / threat types from ThreatFox
 func (t *ThreatFox) GetIOCTypes() ([]IOCType, error) {
 	resp, err := t.client.R().
 		SetHeader("Content-Type", "application/json").

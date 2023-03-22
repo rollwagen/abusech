@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/rollwagen/abusech/pkg/printer"
+	"github.com/rollwagen/abusech/printer"
 
-	threatfox "github.com/rollwagen/abusech/pkg/threatfox"
-
+	"github.com/rollwagen/abusech/threatfox"
 	"github.com/samber/lo"
 
 	"github.com/spf13/cobra"

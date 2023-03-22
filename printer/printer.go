@@ -8,14 +8,14 @@ import (
 	"strings"
 	"time"
 
+	tf "github.com/rollwagen/abusech/threatfox"
+
 	"github.com/fatih/color"
 	"github.com/olekukonko/tablewriter"
-
-	. "github.com/rollwagen/abusech/pkg/threatfox"
 )
 
 // PrintIOCs prints a table of IOC list returned by 'query' API call; filter can be any valid ioc type
-func PrintIOCs(iocs []IOC, maxItems int, filter string) error {
+func PrintIOCs(iocs []tf.IOC, maxItems int, filter string) error {
 	sort.Slice(iocs, func(i, j int) bool {
 		return iocs[i].ID > iocs[j].ID
 	})
@@ -64,7 +64,7 @@ func PrintIOCs(iocs []IOC, maxItems int, filter string) error {
 	return nil
 }
 
-func PrintIOCByID(detail IOCDetail) {
+func PrintIOCByID(detail tf.IOCDetail) {
 	firstSeen := time.Time(detail.FirstSeen).Format("2006-01-02 15:04:05 UTC")
 
 	table := tablewriter.NewWriter(os.Stdout)
