@@ -25,9 +25,9 @@ brews:
     license: Apache-2.0
     install: |-
       bin.install "abusech"
-      bash_completion.install "completions/aws-services.bash" => "abusech"
-      zsh_completion.install "completions/aws-services.zsh" => "_abusech"
-      fish_completion.install "completions/aws-services.fish"
+      bash_completion.install "completions/abusech.bash" => "abusech"
+      zsh_completion.install "completions/abusech.zsh" => "_abusech"
+      fish_completion.install "completions/abusech.fish"
 
 checksum:
   name_template: 'checksums.txt'
