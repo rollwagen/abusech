@@ -1,0 +1,49 @@
+project_name: abusech
+
+before:
+  hooks:
+    - go mod tidy
+    - ./scripts/completions.sh
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    binary: abusech
+    ldflags:
+      - -s -w -X main.build={{.Version}}
+
+brews:
+  - tap:
+      owner: rollwagen
+      name: homebrew-tap
+    license: Apache-2.0
+    install: |-
+      bin.install "abusech"
+      bash_completion.install "completions/aws-services.bash" => "abusech"
+      zsh_completion.install "completions/aws-services.zsh" => "_abusech"
+      fish_completion.install "completions/aws-services.fish"
+
+checksum:
+  name_template: 'checksums.txt'
+
+archives:
+  - files:
+      - README.md
+      - LICENSE
+      - completions/*
+
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
