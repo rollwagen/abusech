@@ -6,8 +6,7 @@ ThreatFox is an open threat intelligence sharing platform, allowin anyone to sha
 This repository provides a command-line tool (CLI) to
 interact with the [ThreatFox](https://threatfox.abuse.ch/) API.
 
-<img width="663" alt="image" src="https://user-images.githubusercontent.com/7364201/227004390-28153636-78bf-4d62-a3e2-6ba5a245b137.png">
-
+![render1679591685834](https://user-images.githubusercontent.com/7364201/227285831-69b021f5-6e74-4cb7-b7e2-941656664dd5.gif)
 
 ## Install and run
 
