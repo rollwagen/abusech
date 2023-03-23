@@ -6,21 +6,28 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// threatfoxCmd represents the threatfox command to access the threatfox.abuse.ch API
+// infoCmd description of the company.
 var infoCmd = &cobra.Command{
 	Use:   "info",
 	Short: "Print information about the CLI and abuse.ch",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("                                                                   ╞▌                  ")
-		fmt.Println("                                                                   ╞▌          █       ")
-		fmt.Println("         ██       █████▄▄▄    ██      ██    ▄▄████▄    ████████    ╞▌    ▄▄▀▀  █▄▄▄▄   ")
-		fmt.Println("        ████      ██    ██▌   ██      ██   ▐█▌         ██          ╞▌    █     █   █   ")
-		fmt.Println("       ██  █▌     ██▄▄▄▄██    ██      ██    ██▄▄▄      ██▄▄▄▄▄     ╞▌    ▀▀▄▄  █   █   ")
-		fmt.Println("      ██    █▌    ██▀▀▀▀▀█▌   ██      ██     ▀▀▀▀██▄   ██▀▀▀▀▀     ╞▌                  ")
-		fmt.Println("     ██▌    ██▄   ██     ██    █▌     █▌          █▌   ██          ╞▌                  ")
-		fmt.Println("    ██▀      ▀█   █████▀▀▀     ▀▀████▀▀     ▀████▀▀    ████████    ╞▌                  ")
-		fmt.Println("                                                                   ╞▌                  ")
-		fmt.Println("                                                                   ╞▌                  ")
+		fmt.Println("                                                                  ╞▌                 ")
+		fmt.Println("                                                                  ╞▌         █       ")
+		fmt.Println("         ██       █████▄▄▄    ██      ██    ▄▄████▄    ████████   ╞▌   ▄▄▀▀  █▄▄▄▄   ")
+		fmt.Println("        ████      ██    ██▌   ██      ██   ▐█▌         ██         ╞▌   █     █   █   ")
+		fmt.Println("       ██  █▌     ██▄▄▄▄██    ██      ██    ██▄▄▄      ██▄▄▄▄▄    ╞▌   ▀▀▄▄  █   █   ")
+		fmt.Println("      ██    █▌    ██▀▀▀▀▀█▌   ██      ██     ▀▀▀▀██▄   ██▀▀▀▀▀    ╞▌                 ")
+		fmt.Println("     ██▌     █▄   ██     ██    █      █           █▌   ██         ╞▌                 ")
+		fmt.Println("    ██▀      ▀█   █████▀▀▀     ▀▀████▀▀     ▀████▀▀    ████████   ╞▌                 ")
+		fmt.Println("                                                                  ╞▌                 ")
+		fmt.Println(" ")
+		fmt.Println(" ")
+		fmt.Println("Abuse.ch is a community-driven threat intelligence provider that helps internet service providers and network") 
+		fmt.Println("operators protect their infrastructure from cyber threats, with a focus on malware and botnets.") 
+		fmt.Println("Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform that provides") 
+		fmt.Println("scalable and flexible computing resources to businesses of all sizes.")
+		fmt.Println(" ")
+		fmt.Println("https://github.com/rollwagen/abusech")
 	},
 }
 
