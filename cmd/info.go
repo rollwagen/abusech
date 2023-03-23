@@ -22,10 +22,8 @@ var infoCmd = &cobra.Command{
 		fmt.Println("                                                                  ╞▌                 ")
 		fmt.Println(" ")
 		fmt.Println(" ")
-		fmt.Println("Abuse.ch is a community-driven threat intelligence provider that helps internet service providers and network") 
-		fmt.Println("operators protect their infrastructure from cyber threats, with a focus on malware and botnets.") 
-		fmt.Println("Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform that provides") 
-		fmt.Println("scalable and flexible computing resources to businesses of all sizes.")
+		fmt.Println("Abuse.ch is a community-driven threat intelligence provider that helps internet service providers and network")
+		fmt.Println("operators protect their infrastructure from cyber threats, with a focus on malware and botnets.")
 		fmt.Println(" ")
 		fmt.Println("https://github.com/rollwagen/abusech")
 	},
