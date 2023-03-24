@@ -14,10 +14,11 @@ import (
 
 // flags
 var (
-	days   int
-	filter string
-	id     string
-	limit  int
+	days       int
+	filter     string
+	id         string
+	limit      int
+	searchTerm string
 )
 
 var tf = threatfox.New()
@@ -47,6 +48,7 @@ func init() {
 	queryCmd.Flags().StringVarP(&filter, "filter", "f", "", "IOC type to filter for e.g. 'ip:port'")
 
 	queryCmd.Flags().StringVarP(&id, "id", "i", "", "Print details of IOC with given id (takes precedence over general query)")
+	queryCmd.Flags().StringVarP(&searchTerm, "search-term", "s", "", "Search for an IOC on ThreatFox")
 
 	_ = queryCmd.RegisterFlagCompletionFunc("filter", func(cmd *cobra.Command, args []string, toComplete string) ([]string, cobra.ShellCompDirective) {
 		types, _ := tf.GetIOCTypes()

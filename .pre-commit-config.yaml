@@ -7,7 +7,7 @@ repos:
   # - id: go-fmt
   # - id: go-vet
   - id: go-mod-tidy
-  # - id: golangci-lint
+  - id: golangci-lint
   # - id: go-unit-tests
   - id: go-critic
 

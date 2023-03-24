@@ -1,11 +1,13 @@
 ---
 run:
   deadline: 5m
+  skip-dirs:
+  - scripts
 
 linters:
   disable-all: true
   enable:
-    # - bodyclose
+    - bodyclose
     # - deadcode DEPRECATED
     # - depguard
     # - dogsled
@@ -16,7 +18,7 @@ linters:
     - gas
     # - gochecknoinits
     - goconst
-    # - gocritic
+    - gocritic
     # - gocyclo
     # - gofmt
     - goimports
@@ -24,18 +26,18 @@ linters:
     # - gomnd
     # - goprintffuncname
     - gosec
-    # - gosimple
+    - gosimple
     - govet
     - ineffassign
     # - lll
     - megacheck
-    - misspell
+      # - misspell
     # - nakedret
     # - noctx
     # - nolintlint
     # - rowserrcheck
     # - scopelint
-    # - staticcheck
+    - staticcheck
     # - structcheck DEPRECATED
     - stylecheck
     - typecheck
