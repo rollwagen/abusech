@@ -27,15 +27,33 @@ var tf = threatfox.New()
 var queryCmd = &cobra.Command{
 	Use:   "query",
 	Short: "Query recent IOCs",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(_ *cobra.Command, _ []string) {
 		if id != "" {
-			detail, _ := tf.GetIOCByID(id)
+			detail, err := tf.GetIOCByID(id)
+			if err != nil {
+				_, _ = fmt.Fprintf(os.Stderr, "could not get IOC with id=%s: %s\n", id, err)
+				return
+			}
+
 			printer.PrintIOCByID(detail)
 			return
 		}
 
-		iocs, _ := tf.GetIOCs(days)
-		err := printer.PrintIOCs(iocs, limit, filter)
+		if filter != "" {
+			valid, err := tf.IsValidIOCType(filter)
+			if !valid || err != nil {
+				_, _ = fmt.Fprintf(os.Stderr, "invalid filter '%s': %s\n", filter, err)
+				return
+			}
+		}
+
+		iocs, err := tf.GetIOCs(days)
+		if err != nil {
+			_, _ = fmt.Fprintf(os.Stderr, "query failed: %s\n", err)
+			return
+		}
+
+		err = printer.PrintIOCs(iocs, limit, filter)
 		if err != nil {
 			_, _ = fmt.Fprintf(os.Stderr, "error printing IOC list: %s\n", err)
 		}
