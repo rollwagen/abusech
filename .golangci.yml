@@ -45,3 +45,9 @@ linters:
     # - varcheck DEPRECATED
     # - whitespace
   fast: false
+
+linters-settings:
+        revive:
+            rules:
+                - name: var-naming
+                  disabled: false
