@@ -40,7 +40,33 @@ func (t *ThreatFox) GetIOCByID(id string) (IOCDetail, error) {
 		return IOCDetail{}, fmt.Errorf("could not complete http POST to %s: %w", baseURL, err)
 	}
 
-	return *resp.Result().(*IOCDetail), nil
+	r := resp.Result()
+	if iocDetail, ok := r.(*IOCDetail); ok {
+		return *iocDetail, nil
+	}
+
+	return IOCDetail{}, fmt.Errorf("could not type cast response to IOCDetail")
+}
+
+// SearchIOC searches IOC for the given term
+func (t *ThreatFox) SearchIOC(term string) ([]IOC, error) {
+	if len(term) < 3 {
+		return nil, fmt.Errorf("please provide a search term with a minimum length of 3 characters")
+	}
+	body := fmt.Sprintf("{ \"query\": \"search_ioc\", \"search_term\": \"%s\" }", term)
+
+	resp, err := t.client.R().
+		SetHeader("Content-Type", "application/json").
+		SetBody([]byte(body)).
+		SetResult(IOCs{}).
+		Post(baseURL)
+	if err != nil {
+		return nil, fmt.Errorf("could not complete http POST to %s: %w", baseURL, err)
+	}
+
+	r := resp.Result().(*IOCs)
+
+	return r.Data, nil
 }
 
 // GetIOCs return a copy of the current IOC dataset from ThreatFox by sending an HTTP POST request to the Threatfox API
