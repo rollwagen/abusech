@@ -1,0 +1,26 @@
+{
+  "query_status": "ok",
+  "data": [
+    {
+      "id": "1337",
+      "ioc": "139.180.203.104:443",
+      "threat_type": "payload_delivery",
+      "threat_type_desc": "Indicator that identifies a malware distribution server (payload delivery)",
+      "ioc_type": "ip:port",
+      "ioc_type_desc": "ip:port combination that delivery a malware payload",
+      "malware": "win.cobalt_strike",
+      "malware_printable": "Cobalt Strike",
+      "malware_alias": "Agentemis,BEACON,CobaltStrike,cobeacon",
+      "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+      "confidence_level": 50,
+      "first_seen": "2021-01-04 15:22:41 UTC",
+      "last_seen": null,
+      "reference": null,
+      "reporter": "d4rksystem",
+      "tags": [
+        "CobaltStrike"
+      ],
+      "malware_samples": []
+    }
+  ]
+}

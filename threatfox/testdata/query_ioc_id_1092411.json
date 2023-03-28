@@ -1,0 +1,29 @@
+{
+  "id": "1092411",
+  "ioc": "4e5902809c2d4b55dc13e686249a2ea9",
+  "threat_type": "payload",
+  "threat_type_desc": "Indicator that identifies a malware sample (payload)",
+  "ioc_type": "md5_hash",
+  "ioc_type_desc": "MD5 hash of a malware sample (payload)",
+  "malware": "unknown",
+  "malware_printable": "Unknown malware",
+  "malware_alias": null,
+  "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+  "confidence_level": 50,
+  "first_seen": "2023-03-21 09:46:56 UTC",
+  "last_seen": null,
+  "reference": "https://twitter.com/StopMalvertisin/status/1637909891607334913",
+  "reporter": "abuse_ch",
+  "comment": null,
+  "tags": [
+    "APT",
+    "gamaredon"
+  ],
+  "credits": [
+    {
+      "credits_from": "ThreatFox",
+      "credits_amount": 5
+    }
+  ],
+  "malware_samples": []
+}

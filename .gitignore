@@ -15,6 +15,5 @@
 # vendor/
 
 .DS_Store
-*.json
 # ignore binary
 abusech
