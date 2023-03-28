@@ -1,5 +1,8 @@
 # abusech
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7364201/228208134-713ed35b-4c89-4387-9ca6-2073a23924df.png" height="300">
+</p>
 
 ThreatFox is an open threat intelligence sharing platform, allowin anyone to share indicators of compromise (IOCs).
 
