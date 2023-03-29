@@ -1,5 +1,9 @@
 # abusech
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/rollwagen/abussech.svg)](https://pkg.go.dev/github.com/rollwagen/abusech)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rollwagen/abusech)](https://goreportcard.com/report/github.com/rollwagen/abusech)
+![CodeQL](https://github.com/rollwagen/abusech/workflows/CodeQL/badge.svg)
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/7364201/228208134-713ed35b-4c89-4387-9ca6-2073a23924df.png" height="300">
 </p>
