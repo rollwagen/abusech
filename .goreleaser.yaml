@@ -32,6 +32,9 @@ brews:
 checksum:
   name_template: 'checksums.txt'
 
+signs:
+  - artifacts: checksum
+
 archives:
   - files:
       - README.md
