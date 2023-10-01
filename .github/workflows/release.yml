@@ -24,7 +24,7 @@ jobs:
         uses: sigstore/cosign-installer@v3.1.2
       - name: Run GoReleaser
         timeout-minutes: 60
-        uses: goreleaser/goreleaser-action@v4
+        uses: goreleaser/goreleaser-action@v5
         with:
           distribution: goreleaser
           version: latest
