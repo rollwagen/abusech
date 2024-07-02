@@ -28,7 +28,7 @@ jobs:
         with:
           distribution: goreleaser
           version: latest
-          args: release --rm-dist
+          args: release
         env:
           GITHUB_TOKEN: ${{ secrets.GORELEASER_TOKEN }}
           COSIGN_PWD: ${{ secrets.COSIGN_PWD }}

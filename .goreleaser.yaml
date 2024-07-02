@@ -3,6 +3,7 @@ project_name: abusech
 before:
   hooks:
     - go mod tidy
+    - rm -rf ./dist
     - ./assets/scripts/completions.sh
 
 builds:
