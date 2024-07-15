@@ -7,7 +7,7 @@ require (
 	github.com/go-resty/resty/v2 v2.13.1
 	github.com/jarcoal/httpmock v1.3.1
 	github.com/olekukonko/tablewriter v0.0.5
-	github.com/samber/lo v1.44.0
+	github.com/samber/lo v1.45.0
 	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.9.0
 )
