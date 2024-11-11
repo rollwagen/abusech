@@ -4,7 +4,7 @@ go 1.22
 
 require (
 	github.com/fatih/color v1.18.0
-	github.com/go-resty/resty/v2 v2.15.3
+	github.com/go-resty/resty/v2 v2.16.0
 	github.com/jarcoal/httpmock v1.3.1
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/samber/lo v1.47.0
